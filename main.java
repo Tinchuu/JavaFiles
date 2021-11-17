@@ -16,8 +16,10 @@ public class main {
         do {
             System.out.println("Enter search file name (\"~\" to stop): ");
             CurrentInput = Input.nextLine();
+            if(!CurrentInput.equals("~"))
+                break;
             lists.SearchFiles(files, CurrentInput);
-        } while(CurrentInput != "~");
+        } while(true);
 
         Input.close();
     }
